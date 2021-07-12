@@ -11,9 +11,8 @@ app.use(express.urlencoded( { extended: true} ));
 app.use(express.json());
 app.use(cookieParser());
 
-//const dbURI = 'mongodb+srv://user1:test1234@cluster0.xsk26.mongodb.net/nodetutorial?retryWrites=true&w=majority'
 PORT = process.env.PORT | 3001
-const dbURI = 'mongodb+srv://admin:admin1234@cluster0.xsk26.mongodb.net/node-auth'
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.xsk26.mongodb.net/node-auth'
 
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex: true})
